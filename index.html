@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paprika Labs</title>
+  <meta name="description" content="Paprika Labs builds focused software for specific problems. We find a real pain, build something that solves it, and ship it.">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --red: #C0392B;
+      --black: #111111;
+      --gray: #555555;
+      --light: #F5F5F5;
+      --border: #E0E0E0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      color: var(--black);
+      background: #ffffff;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    a { color: var(--red); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Nav */
+    nav {
+      padding: 32px 0 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .wordmark {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--red);
+      letter-spacing: -0.5px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      font-size: 14px;
+      color: var(--gray);
+    }
+    .nav-links a { color: var(--gray); }
+    .nav-links a:hover { color: var(--black); text-decoration: none; }
+
+    /* Hero */
+    .hero {
+      padding: 72px 0 56px;
+    }
+    .hero h1 {
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -1px;
+      margin-bottom: 20px;
+      max-width: 520px;
+    }
+    .hero p {
+      font-size: 18px;
+      color: var(--gray);
+      max-width: 480px;
+      line-height: 1.6;
+    }
+
+    /* Products */
+    .products {
+      padding: 48px 0;
+      border-top: 1px solid var(--border);
+    }
+    .section-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 32px;
+    }
+    .product-list {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+    .product {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .product-header {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+    }
+    .product-name {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--black);
+    }
+    .product-status {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--gray);
+      background: var(--light);
+      padding: 2px 8px;
+      border-radius: 3px;
+    }
+    .product-desc {
+      font-size: 15px;
+      color: var(--gray);
+      line-height: 1.5;
+    }
+    .product-link {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--red);
+    }
+
+    /* About */
+    .about {
+      padding: 48px 0;
+      border-top: 1px solid var(--border);
+    }
+    .about p {
+      font-size: 16px;
+      color: var(--gray);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    .about p:last-child { margin-bottom: 0; }
+
+    /* Footer */
+    footer {
+      padding: 32px 0;
+      border-top: 1px solid var(--border);
+    }
+    footer .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .footer-text {
+      font-size: 13px;
+      color: var(--gray);
+    }
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      font-size: 13px;
+    }
+    .footer-links a { color: var(--gray); }
+    .footer-links a:hover { color: var(--black); text-decoration: none; }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 28px; }
+      nav .container { flex-direction: column; align-items: flex-start; gap: 16px; }
+      footer .container { flex-direction: column; gap: 16px; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <span class="wordmark">paprika</span>
+      <div class="nav-links">
+        <a href="https://github.com/paprika-org">GitHub</a>
+        <a href="https://bsky.app/profile/paprika-lab.bsky.social">Bluesky</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Focused software for specific problems.</h1>
+        <p>We find a real, painful problem with a clear buyer. We build something focused that solves it. We ship it. Then we do it again.</p>
+      </div>
+    </section>
+
+    <section class="products">
+      <div class="container">
+        <div class="section-label">Products</div>
+        <div class="product-list">
+
+          <div class="product">
+            <div class="product-header">
+              <span class="product-name">proposalkit</span>
+              <span class="product-status">live</span>
+            </div>
+            <p class="product-desc">CLI that generates polished client proposals from bullet points. Free for markdown output. Pro tier adds PDF export with 6 themes.</p>
+            <a class="product-link" href="https://github.com/paprika-org/proposalkit">View on GitHub →</a>
+          </div>
+
+          <div class="product">
+            <div class="product-header">
+              <span class="product-name">autodoc</span>
+              <span class="product-status">early access</span>
+            </div>
+            <p class="product-desc">Pipeline-native documentation for open-source projects. Runs in CI, keeps docs in sync with the codebase, built for maintainers not readers.</p>
+            <a class="product-link" href="https://github.com/paprika-org/autodoc">View on GitHub →</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="container">
+        <div class="section-label">About</div>
+        <p>Paprika Labs is a small studio. The name is the point: paprika doesn't try to be the main ingredient. It makes everything else better.</p>
+        <p>We're not building platforms or ecosystems. We find specific problems that have clear buyers, build the smallest useful thing, and ship it.</p>
+        <p>Questions or interested in what we're building? <a href="mailto:hello@paprika-labs.app">hello@paprika-labs.app</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span class="footer-text">© 2026 Paprika Labs</span>
+      <div class="footer-links">
+        <a href="https://github.com/paprika-org">GitHub</a>
+        <a href="https://bsky.app/profile/paprika-lab.bsky.social">Bluesky</a>
+        <a href="mailto:hello@paprika-labs.app">Email</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
